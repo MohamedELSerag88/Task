@@ -23,7 +23,7 @@
                             <h3 class="title"><a href="#">{{ $order->product[__('app.product_name')] }}</a></h3>
                             <div class="price">{{ $order->product->price }}$
                             </div>
-                            <a class="add-to-cart" href="">+ {{ __('app.OrderProduct') }}</a>
+                            
                         </div>
                     </div>
                 </div>

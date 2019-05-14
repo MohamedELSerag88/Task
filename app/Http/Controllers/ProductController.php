@@ -123,6 +123,8 @@ class ProductController extends Controller
             flash('Product Not Found ')->error();
             return back();
         }
+        flash('Product Updated successfully')->success();
+
         return redirect('/myproducts');
     }
 
@@ -169,6 +171,7 @@ class ProductController extends Controller
                 $checkorder=\Auth::user()->orders->where('product_id',$id)->first();
                 if($checkorder){
                     flash('You Already ordered this product')->warning();
+                    return back();
 
                 }
                 else{

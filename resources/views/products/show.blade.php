@@ -3,6 +3,8 @@
 @section('content')
 
 <div class="container">
+        @include('flash::message')
+
         <div class="row">
            <div class="col-xs-4 item-photo">
                 <img style="max-width:100%;" src="/{{ $product->image??'defult.jpg' }}" />
